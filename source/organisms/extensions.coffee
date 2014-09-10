@@ -1,6 +1,6 @@
 class Extensions extends Atoms.Organism.Article
 
-  @scaffold "../source/organisms/extensions.json"
+  @scaffold "assets/scaffolds/extensions.json"
 
   render: ->
     super
@@ -19,8 +19,6 @@ class Extensions extends Atoms.Organism.Article
     @calendar.first.setEvent new Date(2014, 8, 1)
     @calendar.second.setEvent new Date(1980, 3, 10)
     @calendar.first.removeEvent new Date(2014, 7, 30)
-
-
 
     @calendar.second.setEvent [
       new Date(2014, 5, 14),

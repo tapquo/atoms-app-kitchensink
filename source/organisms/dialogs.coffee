@@ -90,7 +90,8 @@ class DialogForm extends Atoms.Organism.Dialog
 
 
 class Second extends Atoms.Organism.Article
-  @scaffold "../source/organisms/dialogs.json"
+
+  @scaffold "assets/scaffolds/dialogs.json"
 
   constructor: ->
     super

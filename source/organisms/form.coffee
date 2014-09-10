@@ -1,6 +1,6 @@
 class Form extends Atoms.Organism.Article
 
-  @scaffold "../source/organisms/form.json"
+  @scaffold "assets/scaffolds/form.json"
 
   constructor: ->
     super

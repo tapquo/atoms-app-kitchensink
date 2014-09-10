@@ -74,4 +74,4 @@ class List extends Atoms.Organism.Article
     # , 1000
 
 
-list = new List(null, "../source/organisms/list.json");
+list = new List(null, "assets/scaffolds/list.json");
