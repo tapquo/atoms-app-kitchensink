@@ -1,0 +1,20 @@
+{
+  "id": "options2",
+  "style": "right",
+  "children": [
+    {
+      "Organism.Header": {
+        "children": [
+          {
+            "Atom.Heading": {
+              "value": "Options 2"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Organism.Section": { }
+    }
+  ]
+}

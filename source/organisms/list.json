@@ -1,0 +1,148 @@
+{
+  "id": "first",
+  "aside": "Options",
+  "children": [
+    {
+      "Organism.Header": {
+        "children": [
+          {
+            "Atom.Heading": {
+              "value": "Contacts"
+            }
+          },
+          {
+            "Molecule.Navigation": {
+              "style": "left",
+              "children": [
+                {
+                  "Atom.Button": {
+                    "icon": "back",
+                    "path": "back"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "Molecule.Navigation": {
+              "style": "right",
+              "children": [
+                {
+                  "Atom.Button": {
+                    "icon": "add-user",
+                    "callbacks": ["onLoadContacts"]
+                  }
+                },
+                {
+                  "Atom.Button": {
+                    "icon": "angle-right-circle",
+                    "path": "second/main"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Molecule.Navigation2": {
+        "children": [
+          {
+            "Atom.Button": {
+              "text": "bindings",
+              "path": "list/binding"
+            }
+          },
+          {
+            "Atom.Button": {
+              "text": "other",
+              "path": "list/manual"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Molecule.Search": {
+        "events": ["change", "submit"],
+        "id": "search",
+        "children": [
+        {
+          "Atom.Input": {"placeholder": "Search..."}
+        }
+        ]
+      }
+    },
+    {
+      "Organism.Section": {
+        "id": "binding",
+        "events": ["scroll", "pull"],
+        "children": [
+          {
+            "Molecule.List": {
+              "id"          : "list",
+              "events"      : ["select"],
+              "bind": {
+                "entity"    : "__.Entity.User",
+                "atom"      : "Atom.Li",
+                "events"    : ["touch", "destroyable", "hold", "doubleTap"],
+                "create"    : true,
+                "update"    : true,
+                "destroy"   : true
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Organism.Section": {
+        "style": "padding",
+        "id": "manual",
+        "events": ["pull"],
+        "children": [
+          {
+            "Molecule.List": {
+                "id" : "list",
+                "bind": {
+                  "entity"    : "Atoms.App.Entity.User",
+                  "atom"      : "Atom.LiExtra",
+                  "events"    : ["touch"],
+                  "callbacks" : ["onContactDelete"],
+                  "create"    : false,
+                  "update"    : true,
+                  "destroy"   : true
+                }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Organism.Footer": {
+        "children": [
+          {
+            "Molecule.Navigation": {
+              "children": [
+                {
+                  "Atom.Button": {
+                    "icon": "magnet",
+                    "path": "list/binding"
+                  }
+                },
+                {
+                  "Atom.Button": {
+                    "icon": "personadd-outline",
+                    "text": "no binding",
+                    "path": "list/manual"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
