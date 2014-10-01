@@ -8,7 +8,8 @@ children:
           children:
             - Atom.Button:
                 icon: menu
-                path: options
+                path: menu
+
       - Atom.Progress:
           id: progress
           value: 40
@@ -29,7 +30,7 @@ children:
                   - onListPath
             - Atom.Button:
                 icon: menu
-                path: options2
+                path: timeline
 
   - Organism.Section:
       id: main
@@ -431,3 +432,14 @@ children:
         - Atom.Button:
             icon: check
             style: fluid
+
+  - Organism.Section:
+      id: payments
+      style: padding
+      children:
+        - Molecule.StripeCreditCard:
+            id: stripe
+        - Molecule.CreditCard:
+            id: credit
+        - Molecule.AccountNumber:
+            id: account

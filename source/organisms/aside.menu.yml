@@ -1,4 +1,4 @@
-id: options
+id: menu
 children:
   - Organism.Header:
       children:
@@ -43,6 +43,13 @@ children:
                   text: Contacts
                   path: list/bindings
                   events: [touch]
+
+              - Atom.Link:
+                  icon: grid
+                  text: Payments
+                  path: form/Payments
+                  events:
+                    - touch
         - Atom.Button:
             text: Add Contact
             style: fluid accept

@@ -3,13 +3,29 @@ style: cover
 children:
   - Organism.Header:
       children:
-        - Atom.Heading:
-            value: Extensions
+        - Molecule.Navigation:
+            children:
+              - Atom.Button:
+                  icon: display2
+                  path: extensions/carousel
+              - Atom.Button:
+                  icon: map
+                  path: extensions/maps
+              - Atom.Button:
+                  icon: add-user
+                  path: extensions/appnimasession
+              - Atom.Button:
+                  icon: user
+                  path: extensions/appnimaprofile
+              - Atom.Button:
+                  icon: date
+                  path: extensions/calendar
+
         - Molecule.Navigation:
             style: right
             children:
               - Atom.Button:
-                  icon: down
+                  icon: close
                   path: back
 
   - Molecule.Navigation:

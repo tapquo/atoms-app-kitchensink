@@ -2,7 +2,7 @@
 
 class List extends Atoms.Organism.Article
 
-  # @scaffold "source/organisms/list.json"
+  @url = "assets/scaffolds/list.json"
 
   render: ->
     super
@@ -59,7 +59,7 @@ class List extends Atoms.Organism.Article
     entity.create name: "Javi Jiménez Villar", when: "10/04/1980", url: "http://cdn.tapquo.com/photos/soyjavi.jpg"
     entity.create name: "Mock Data", style: "anchor"
     entity.create name: "Name #{i}" for i in [1..10]
-    # @manual.list.entity entity.all()
+    @manual.list.entity entity.all()
 
     setTimeout =>
       __.Entity.User.findBy("name", "Javi Jiménez Villar")?.updateAttributes
@@ -74,4 +74,4 @@ class List extends Atoms.Organism.Article
     # , 1000
 
 
-list = new List(null, "assets/scaffolds/list.json");
+list = new List()

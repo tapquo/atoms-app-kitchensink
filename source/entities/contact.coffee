@@ -13,7 +13,6 @@ class __.Entity.User extends Atoms.Class.Entity
       super attributes
 
   parse: ->
-    console.log "{parse}", @name
     style = if @url then "image"
     return {
       image       : @url

@@ -22,14 +22,17 @@ children:
                   icon: angle-right-circle
                   path: second/main
 
-  - Molecule.Navigation2:
+  - Molecule.Navigation:
       children:
          - Atom.Button:
-            text: bindings
+            icon: magnet
             path: list/binding
          - Atom.Button:
-            text: other
+            text: no binding
             path: list/manual
+         - Atom.Button:
+            text: extended
+            path: list/extended
 
   - Molecule.Search:
       id: search
@@ -80,6 +83,12 @@ children:
                 create    : false
                 update    : true
                 destroy   : true
+
+  - Organism.Section:
+      id: extended
+      children:
+        - Molecule.ListExtended:
+            id: extended
 
   - Organism.Footer:
       children:
