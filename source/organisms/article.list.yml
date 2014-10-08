@@ -3,14 +3,14 @@ aside: Options
 children:
   - Organism.Header:
       children:
-        - Atom.Heading:
-            value: Contacts
         - Molecule.Navigation:
             style: left
             children:
               - Atom.Button:
                   icon: back
                   path: back
+        - Atom.Heading:
+            value: List
         - Molecule.Navigation:
             style: right
             children:
@@ -18,20 +18,17 @@ children:
                   icon: add-user
                   callbacks:
                     - onLoadContacts
-               - Atom.Button:
-                  icon: angle-right-circle
-                  path: second/main
 
   - Molecule.Navigation:
       children:
          - Atom.Button:
-            icon: magnet
-            path: list/binding
+            text: AutoBinding
+            path: list/main
          - Atom.Button:
-            text: no binding
+            text: Manual
             path: list/manual
          - Atom.Button:
-            text: extended
+            text: Extended
             path: list/extended
 
   - Molecule.Search:
@@ -44,7 +41,7 @@ children:
             placeholder: Search...
 
   - Organism.Section:
-      id: binding
+      id: main
       events:
         - scroll
         - pull
@@ -68,8 +65,6 @@ children:
   - Organism.Section:
       style: padding
       id: manual
-      events:
-        - pull
       children:
         - Molecule.List:
               id : list
@@ -86,18 +81,6 @@ children:
 
   - Organism.Section:
       id: extended
-      children:
-        - Molecule.ListExtended:
-            id: extended
-
-  - Organism.Footer:
-      children:
-        - Molecule.Navigation:
-            children:
-               - Atom.Button:
-                  icon: magnet
-                  path: list/binding
-               - Atom.Button:
-                  icon: personadd-outline
-                  text: no binding
-                  path: list/manual
+  #     children:
+  #       - Molecule.ListExtended:
+  #           id: extended

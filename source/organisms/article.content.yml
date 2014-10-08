@@ -1,0 +1,131 @@
+id: content
+children:
+  - Organism.Header:
+      id: header
+      children:
+      - Molecule.Navigation:
+          style: left
+          children:
+            - Atom.Button:
+                icon: back
+                path: back
+      - Atom.Heading:
+          value: Content
+
+  - Molecule.Navigation:
+      children:
+         - Atom.Button:
+            text: Text
+            path: content/main
+         - Atom.Button:
+            text: Figures
+            path: content/figures
+         - Atom.Button:
+            text: Others
+            path: content/others
+
+  - Organism.Section:
+      id: main
+      style: padding
+      children:
+         - Atom.Heading:
+            value: h1
+         - Atom.Heading:
+            size: h2
+            value: h2
+         - Atom.Heading:
+            size: h3
+            value: h3
+         - Atom.Heading:
+            size: h4
+            value: h4
+         - Atom.Heading:
+            size: h5
+            value: h5
+         - Atom.Heading:
+            size: h6
+            value: h6
+         - Atom.Text:
+            style: big
+            value: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+         - Atom.Text:
+            value: Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+         - Atom.Text:
+            style: small
+            value: Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+         - Atom.Text:
+            style: tiny
+            value: Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+
+  - Organism.Section:
+      id: figures
+      style: padding
+      children:
+        - Atom.Figure:
+            style: big
+            url: http://
+        - Atom.Figure:
+            style: normal
+            url: http://
+        - Atom.Figure:
+            style: small
+            url: http://
+        - Atom.Figure:
+            style: tiny
+            url: http://
+
+
+  - Organism.Section:
+      id: others
+      style: padding
+      children:
+         - Atom.Heading:
+            value: Tags
+            size: h3
+         - Molecule.Tags:
+            events:
+              - select
+            children:
+              - Atom.Label:
+                  icon: ios7-play
+                  value: audio
+              - Atom.Label:
+                  value: promotion
+                  style: accept
+              - Atom.Label:
+                  value: free
+                  events:
+                    - tap
+              - Atom.Label:
+                  value: music
+                  style: warning
+
+         - Atom.Heading:
+            value: Iframe
+            size: h3
+         - Atom.Iframe:
+            style: tiny
+            url: http://tapquo.com
+
+         - Atom.Heading:
+            value: Progress
+            size: h3
+         - Atom.Progress:
+            style: big
+            min: 0
+            max: 100
+            value: 50
+         - Atom.Progress:
+            min: 0
+            max: 100
+            value: 50
+         - Atom.Progress:
+            style: small
+            min: 0
+            max: 100
+            value: 50
+         - Atom.Progress:
+            style: tiny
+            min: 0
+            max: 100
+            value: 50

@@ -1,0 +1,47 @@
+id: dialogs
+children:
+  - Organism.Header:
+      children:
+        - Molecule.Navigation:
+            style: left
+            children:
+              - Atom.Button:
+                  icon: back
+                  path: back
+        - Atom.Heading:
+            value: Dialogs
+  - Organism.Section:
+      id: main
+      style: padding
+      children:
+        - Atom.Heading:
+            size: h4
+            value: Native
+        - Molecule.Navigation:
+            children:
+              - Atom.Button:
+                  text: Loading
+                  callbacks:
+                    - onLoading
+              - Atom.Button:
+                  text: Push
+                  callbacks:
+                    - onPush
+
+
+        - Atom.Heading:
+            size: h4
+            value: Extends
+        - Molecule.Navigation:
+            children:
+              - Atom.Button:
+                  style: fluid margin-bottom
+                  text: Confirm
+                  callbacks:
+                    - onConfirm
+
+              - Atom.Button:
+                  style: fluid margin-bottom
+                  text: Form
+                  callbacks:
+                    - onForm

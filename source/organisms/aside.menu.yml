@@ -19,37 +19,55 @@ children:
         - Molecule.Navigation:
             children:
               - Atom.Link:
+                  icon: home
+                  text: Home
+                  path: welcome/main
+                  events:
+                    - touch
+              - Atom.Link:
                   icon: help1
-                  text: Form
-                  path: form/main
-                  events: [touch]
+                  text: Navigation
+                  path: navigation/main
+                  events:
+                    - touch
                   info: 12
               - Atom.Link:
                   icon: ios7-compose-outline
-                  text: Form (secondary)
-                  path: form/secondary
-                  events: [touch]
-              - Atom.Link:
-                  icon: images
-                  text: Canvas
-                  path: form/canvas
-                  events: [touch]
-              - Atom.Link:
-                  text: Section centered
-                  path: form/centered
-                  events: [touch]
-              - Atom.Link:
-                  icon: grid
-                  text: Contacts
-                  path: list/bindings
-                  events: [touch]
-
-              - Atom.Link:
-                  icon: grid
-                  text: Payments
-                  path: form/Payments
+                  text: Form Elements
+                  path: form/main
                   events:
                     - touch
+              - Atom.Link:
+                  icon: ios7-compose-outline
+                  text: Content
+                  path: content/main
+                  events:
+                    - touch
+              - Atom.Link:
+                  icon: ios7-compose-outline
+                  text: Media Elements
+                  path: media/main
+                  events:
+                    - touch
+              - Atom.Link:
+                  icon: ios7-compose-outline
+                  text: List
+                  path: list/main
+                  events:
+                    - touch
+              - Atom.Link:
+                  icon: ios7-compose-outline
+                  text: Pull & Refresh
+                  path: form/buttons
+                  events:
+                    - touch
+              - Atom.Link:
+                  icon: ios7-compose-outline
+                  text: Dialogs
+                  path: dialogs/main
+                  events:
+                    - touch
+
         - Atom.Button:
-            text: Add Contact
-            style: fluid accept
+            text: Sign In as Atoms Developer
+            style: fluid theme

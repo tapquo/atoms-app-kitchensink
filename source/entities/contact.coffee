@@ -16,6 +16,7 @@ class __.Entity.User extends Atoms.Class.Entity
     style = if @url then "image"
     return {
       image       : @url
+      icon        : "user"
       info        : @when
       text        : @name
       description : "#{@description} #{style}"

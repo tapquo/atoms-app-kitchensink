@@ -1,0 +1,1 @@
+{"id":"extensions","style":"right","children":[{"Organism.Header":{"children":[{"Atom.Heading":{"value":"Extensions"}}]}},{"Organism.Section":{"id":"payments","style":"padding","children":[{"Molecule.StripeCreditCard":{"id":"stripe"}},{"Molecule.CreditCard":{"id":"credit"}},{"Molecule.AccountNumber":{"id":"account"}}]}}]}

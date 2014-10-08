@@ -2,29 +2,28 @@
 
 class List extends Atoms.Organism.Article
 
-  @url = "assets/scaffolds/list.json"
+  @url = "assets/scaffolds/article.list.json"
 
   render: ->
     super
+    new Atoms.Molecule.ListExtended container: @el.find "#extended"
     do @onLoadContacts
 
-  # Children Bubble Events
+  # -- Children Bubble Events --------------------------------------------------
   onSearchChange: (event, search) ->
     value = search.value()
     if value
-      @binding.list.select (entity) -> entity if entity.name.indexOf(value) > -1
+      @main.list.select (entity) -> entity if entity.name.indexOf(value) > -1
     else
-      @binding.list.all()
+      @main.list.all()
 
   onSearchSubmit: (event, search) ->
-    @binding.list.findBy "name", search.value()
+    @main.list.findBy "name", search.value()
 
-  # Children Bubble Events with Custom Callbacks
   onSectionScroll: (event, section) ->
     super
-    # console.log "onSectionScroll", event
-    # @tunnel "onSectionScroll", event
-    # false
+    console.log "onSectionScroll", event
+    false
 
   onSectionPull: (event, section) ->
     setTimeout ->
@@ -53,8 +52,6 @@ class List extends Atoms.Organism.Article
 
   onLoadContacts: ->
     @search.value ""
-    # Example of Async Process Render with Entity
-    # entity = Atoms.Entity.User
     entity = __.Entity.User
     entity.create name: "Javi Jiménez Villar", when: "10/04/1980", url: "http://cdn.tapquo.com/photos/soyjavi.jpg"
     entity.create name: "Mock Data", style: "anchor"
@@ -67,11 +64,5 @@ class List extends Atoms.Organism.Article
       __.Entity.User.findBy("name", "Name 1")?.updateAttributes
         name: "Catilla"
     , 1000
-
-    # setTimeout =>
-    #   @binding.list.destroyChildren()
-    #   console.log __.Entity.User.all()
-    # , 1000
-
 
 list = new List()
