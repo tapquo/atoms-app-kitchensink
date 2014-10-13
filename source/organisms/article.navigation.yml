@@ -90,7 +90,8 @@ children:
                   count: 8
               - Atom.Button:
                   icon: glasses
+                  text: second
                   path: navigation/second
               - Atom.Button:
-                  icon: look
+                  text: third
                   path: navigation/third

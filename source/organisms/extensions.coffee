@@ -1,4 +1,4 @@
-class Extensions extends Atoms.Organism.Article
+class ExtensionsTest extends Atoms.Organism.Article
 
   @scaffold "assets/scaffolds/extensions.json"
 
@@ -84,4 +84,4 @@ class Extensions extends Atoms.Organism.Article
     instance["#{method}Event"] day.attributes.date
     false
 
-extensions = new Extensions()
+new ExtensionsTest()

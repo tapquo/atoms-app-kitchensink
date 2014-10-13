@@ -57,12 +57,6 @@ children:
                     - touch
               - Atom.Link:
                   icon: ios7-compose-outline
-                  text: Pull & Refresh
-                  path: form/buttons
-                  events:
-                    - touch
-              - Atom.Link:
-                  icon: ios7-compose-outline
                   text: Dialogs
                   path: dialogs/main
                   events:
