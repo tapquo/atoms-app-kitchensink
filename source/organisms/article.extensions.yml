@@ -8,14 +8,15 @@ children:
             value: Extensions
             size: h2
         - Atom.Heading:
-            value: {{extension}}
+            id: context
+            value: name
             size: h3
         - Molecule.Navigation:
-          style: right
-          children:
-            - Atom.Button:
-                text: extensions
-                path: extensions
+            style: right
+            children:
+              - Atom.Button:
+                  icon: menu
+                  path: extensions
 
 
   - Organism.Section:
@@ -33,11 +34,11 @@ children:
       children:
         - Molecule.Calendar:
             style: margin-all
-            date: 2014/08/15
+            date: 2014/10/15
             available:
-              - 2014/08/29
-              - 2014/08/30
-              - 2014/08/14
+              - 2014/10/29
+              - 2014/10/30
+              - 2014/10/14
             events:
               - select
             disabled: true
@@ -46,8 +47,8 @@ children:
             id: first
             style: margin-all
             disable_previous_days: true
-            date: 2014/08/26
-            from: 2014/08/25
+            date: 2014/10/26
+            from: 2014/10/25
             to: 2014/09/15
             events:
               - select
@@ -151,25 +152,47 @@ children:
 
   - Organism.Section:
       id: gmaps
+      style: padding
       children:
         - Atom.GMap:
+            id: instance
             style: big
+        - Atom.Button:
+            text: Set map
+            style: fluid
+            callbacks:
+              - onMap
 
 
   - Organism.Section:
       id: inputrange
+      style: padding
       children:
-
+        - Molecule.Form:
+            children:
+              - Atom.InputRange:
+                  events:
+                    - change
+                  callbacks:
+                    - onRangeChange
+              - Atom.Button:
+                  style: fluid
+                  text: Send
 
   - Organism.Section:
       id: leaflet
       children:
         - Atom.Leaflet:
             id: leaflet
-
+        - Atom.Button:
+            text: Set map
+            style: fluid
+            callbacks:
+              - onMap
 
   - Organism.Section:
       id: payments
+      style: padding
       children:
         - Molecule.StripeCreditCard:
             id: stripe

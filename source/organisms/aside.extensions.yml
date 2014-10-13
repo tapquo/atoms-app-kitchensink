@@ -24,7 +24,7 @@ children:
                   events:
                     - touch
               - Atom.Link:
-                  text: Calenadr
+                  text: Calendar
                   path: extensions/calendar
                   events:
                     - touch
