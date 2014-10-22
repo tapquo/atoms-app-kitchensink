@@ -46,15 +46,39 @@ class Extensions extends Atoms.Organism.Article
     instance["#{method}Event"] day.attributes.date
     false
 
+  onGMapTouch:(event, atom, dispatcher) ->
+    console.log "onGMapTouch", event
+    false
+
+  onGMapMarker: (event, atom, dispatcher) ->
+    console.log "onGMapMarker", event
+    false
+
+  onLeafletTouch:(event, atom, dispatcher) ->
+    console.log "onLeafletTouch", event
+    false
+
+  onLeafletMarker: (event, atom, dispatcher) ->
+    console.log "onLeafletMarker", event
+    false
+
   onMap:  (event, atom, dispatcher) ->
-    position = latitude: 43.23, longitude: 2.94
-    dispatcher.instance.marker position
+    values = latitude: 43.23, longitude: 2.94, id: new Date()
+    dispatcher.instance.marker values
     dispatcher.instance.marker {latitude: 43.233, longitude: 2.943}
-    dispatcher.instance.center position
-    dispatcher.instance.zoom 13
-    setTimeout =>
-      dispatcher.instance.clean()
-    , 3000
+    dispatcher.instance.center values
+    dispatcher.instance.zoom 12
+    false
+
+  onMapClear: (event, atom, dispatcher) ->
+    dispatcher.instance.clean()
+    dispatcher.instance.zoom 10
+    false
+
+  onMapRoute: (event, atom, dispatcher) ->
+    origin = latitude: 43.23, longitude: 2.94
+    destination = latitude: 43.233, longitude: 2.943
+    dispatcher.instance.route origin, destination
     false
 
   onRangeChange: (event, atom) ->

@@ -165,12 +165,25 @@ children:
         - Atom.GMap:
             id: instance
             style: big
+            events:
+              - touch
+              - query
+              - marker
         - Atom.Button:
             text: Set map
             style: fluid
             callbacks:
               - onMap
-
+        - Atom.Button:
+            text: Set route
+            style: fluid
+            callbacks:
+              - onMapRoute
+        - Atom.Button:
+            text: Clear
+            style: fluid
+            callbacks:
+              - onMapClear
 
   - Organism.Section:
       id: inputrange
@@ -189,14 +202,25 @@ children:
 
   - Organism.Section:
       id: leaflet
+      style: padding
       children:
         - Atom.Leaflet:
-            id: leaflet
+            style: big
+            id: instance
+            events:
+              - touch
+              - query
+              - marker
         - Atom.Button:
             text: Set map
             style: fluid
             callbacks:
               - onMap
+        - Atom.Button:
+            text: Clear
+            style: fluid
+            callbacks:
+              - onMapClear
 
   - Organism.Section:
       id: payments
