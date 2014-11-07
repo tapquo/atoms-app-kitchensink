@@ -72,6 +72,7 @@ children:
                       value: 3
               - Atom.Textarea:
                   placeholder: "textarea..."
+                  maxlength: 10
               - Atom.AutoComplete:
                   placeholder: autocomplete...
                   options_array:

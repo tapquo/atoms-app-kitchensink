@@ -53,7 +53,10 @@ class List extends Atoms.Organism.Article
   onLoadContacts: ->
     @search.value ""
     entity = __.Entity.User
-    entity.create name: "Javi Jiménez Villar", when: "10/04/1980", url: "http://cdn.tapquo.com/photos/soyjavi.jpg"
+    entity.create name: ".thumb style", style: "anchor"
+    entity.create name: "Javi Jiménez Villar", style: "thumb", when: "10/04/1980", url: "http://cdn.tapquo.com/photos/soyjavi.jpg"
+    entity.create name: "Catalina Oyaneder", style: "thumb", when: "26/03/1980", url: "http://cdn.tapquo.com/photos/cata.jpg"
+    entity.create name: "Oihane Merino", when: "26/03/1980", url: "http://cdn.tapquo.com/photos/oihane.jpg"
     entity.create name: "Mock Data", style: "anchor"
     entity.create name: "Name #{i}" for i in [1..10]
     @manual.list.entity entity.all()

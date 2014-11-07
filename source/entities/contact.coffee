@@ -13,12 +13,9 @@ class __.Entity.User extends Atoms.Class.Entity
       super attributes
 
   parse: ->
-    style = if @url then "image"
-    return {
-      image       : @url
-      icon        : "user"
-      info        : @when
-      text        : @name
-      description : "#{@description} #{style}"
-      style       : style
-    }
+    image       : @url
+    icon        : "user" unless @url
+    info        : @when
+    text        : @name
+    description : @description or new Date()
+    style       : if @url then "thumb" else @style

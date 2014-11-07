@@ -211,6 +211,8 @@ children:
               - touch
               - query
               - marker
+        - Atom.Leaflet:
+            id: instance2
         - Atom.Button:
             text: Set map
             style: fluid
