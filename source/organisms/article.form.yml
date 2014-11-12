@@ -29,33 +29,50 @@ children:
       style: padding
       children:
         - Molecule.Form:
+            events:
+              - change
+              - submit
+              - error
             children:
               - Atom.Label:
                   value: label
               - Atom.Input:
                   placeholder: "text..."
+                  name: text
+                  required: true
+                  events:
+                    - keyup
               - Atom.Input:
                   type: password
+                  name: password
                   placeholder: "password..."
               - Atom.Input:
                   type: date
+                  name: date
                   placeholder: "date..."
               - Atom.Input:
                   type: number
+                  name: number
                   placeholder: "number..."
               - Atom.Input:
                   style: margin-bottom
+                  name: tel
                   type: tel
                   placeholder: "tel..."
               - Atom.Input:
                   type: checkbox
+                  name: checkbox
                   placeholder: "checkbox..."
               - Atom.Label:
                   value: "Checkbox"
               - Atom.Input:
                   type: range
+                  name: range
                   placeholder: "range..."
+                  events:
+                    - change
               - Atom.Select:
+                  name: select
                   options_array:
                     - select...
                     - one
@@ -71,10 +88,12 @@ children:
                     - label: Three
                       value: 3
               - Atom.Textarea:
+                  name: textarea
                   placeholder: "textarea..."
                   maxlength: 10
               - Atom.AutoComplete:
                   placeholder: autocomplete...
+                  name: autocomplete
                   options_array:
                     - soyjavi
                     - cataflu
@@ -90,6 +109,11 @@ children:
                     - label: tapquo
                       value: 4
               - Atom.Switch:
+                  name: switch
+              - Atom.Button:
+                  icon: check
+                  text: Submit
+                  style: accept fluid margin-top
 
   - Organism.Section:
       id: buttons
