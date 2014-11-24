@@ -4,6 +4,8 @@ class Form extends Atoms.Organism.Article
 
   render: ->
     super
+    @main.form.value text: "soyjavi", password: 1234
+
     setTimeout =>
       @example.form.range.value 5
       @example.form.checkbox.value false

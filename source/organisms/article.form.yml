@@ -29,6 +29,7 @@ children:
       style: padding
       children:
         - Molecule.Form:
+            id: form
             events:
               - change
               - submit
@@ -46,6 +47,8 @@ children:
                   type: password
                   name: password
                   placeholder: "password..."
+              - Atom.Label:
+                  value: Types
               - Atom.Input:
                   type: date
                   name: date
@@ -110,6 +113,20 @@ children:
                       value: 4
               - Atom.Switch:
                   name: switch
+              - Atom.Label:
+                  value: Sizes
+              - Atom.Input:
+                  style: tiny
+                  placeholder: tiny
+              - Atom.Input:
+                  style: small
+                  placeholder: small
+              - Atom.Input:
+                  style: normal
+                  placeholder: normal
+              - Atom.Input:
+                  style: big
+                  placeholder: big
               - Atom.Button:
                   icon: check
                   text: Submit

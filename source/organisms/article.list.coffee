@@ -50,7 +50,7 @@ class List extends Atoms.Organism.Article
     atom.entity.destroy()
     false
 
-  onLoadContacts: ->
+  onLoadContacts: =>
     @search.value ""
     entity = __.Entity.User
     entity.create name: ".thumb style", style: "anchor"
