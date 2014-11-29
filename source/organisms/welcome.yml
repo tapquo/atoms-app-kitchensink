@@ -10,13 +10,17 @@ children:
                 icon: menu
                 path: menu
       - Atom.Heading:
-          value: Atoms Kitchensink
-          style: left
+          value: Atoms
+          size: h2
+      - Atom.Heading:
+          value: Kitchensink
+          size: h3
       - Molecule.Navigation:
           style: right
           children:
             - Atom.Button:
-                text: extensions
+                icon: keypad
+                count: 10
                 path: extensions
 
   - Organism.Section:
