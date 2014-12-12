@@ -53,3 +53,8 @@ children:
                   path: extensions/payments
                   events:
                     - touch
+              - Atom.Link:
+                  text: Table and CRUD
+                  path: extensions/table
+                  events:
+                    - touch

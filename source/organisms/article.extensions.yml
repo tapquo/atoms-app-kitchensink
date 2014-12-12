@@ -234,3 +234,23 @@ children:
             id: credit
         - Molecule.AccountNumber:
             id: account
+
+  - Organism.Section:
+      id: table
+      style: padding
+      children:
+        - Molecule.Table:
+            id: instance
+            events:
+              - select
+            columns:
+              id  : number
+              name: string
+              when: date
+            bind:
+              entity      : "__.Entity.User"
+              atom        : "Atom.TableRow"
+              events      : ["touch"]
+              create      : true
+              update      : true
+              destroy     : true

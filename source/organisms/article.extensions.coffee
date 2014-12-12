@@ -6,6 +6,7 @@ class Extensions extends Atoms.Organism.Article
 
   render: ->
     super
+    # -- Carousel
     carousel = @carousel.instance
     carousel.clean()
     carousel.appendChild "Atom.Figure", url: "http://cdn.tapquo.com/photos/javi.jpg"
@@ -13,6 +14,7 @@ class Extensions extends Atoms.Organism.Article
     carousel.appendChild "Atom.Figure", url: "http://cdn.tapquo.com/photos/cata.jpg"
     carousel.initialize()
 
+    # -- Calendar
     @calendar.first.setEvent new Date(2014, 10, 15)
     @calendar.first.setEvent new Date(2014, 10, 29)
     @calendar.first.setEvent new Date(2014, 10, 30)
@@ -29,6 +31,24 @@ class Extensions extends Atoms.Organism.Article
     @calendar.first.refresh
       available: ["2014/10/29", "2014/10/30", "2014/10/31", "2014/09/01"]
       date     : "2014/10/30"
+
+    # -- Table & CRUD
+    for i in [1..10]
+      __.Entity.User.create
+        id          : i
+        name        : "Name #{i}"
+        description : "Description #{i}"
+        url         : "http://#{i}"
+        when        : new Date()
+        style       : "style #{i}"
+
+    @table.instance.row 0 # Select by index
+    setTimeout (=> @table.instance.row __.Entity.User.all()[5]), 1000 # Select by entity
+    new Atoms.Organism.Crud
+      id      : "user"
+      entity  : "__.Entity.User"
+      fields  : ["name", "description", "url", "when"]
+      required: ["name"]
 
   # -- Children Bubble Events --------------------------------------------------
   onSectionShow: (section) ->
@@ -113,5 +133,14 @@ class Extensions extends Atoms.Organism.Article
 
   # onCarouselEnd: (event) ->
   #   console.info "onCarouselEnd", event
+
+  onTableSelect: (row, table) ->
+    console.log "->", row.entity, __.Dialog.Crud
+    __.Dialog.Crud.show
+      title   : "Edit #{row.entity.name}"
+      entity  : row.entity
+      fields  : ["name", "when"]
+      # required: ["description"]
+      destroy : true
 
 new Extensions()
