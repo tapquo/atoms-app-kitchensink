@@ -135,11 +135,10 @@ class Extensions extends Atoms.Organism.Article
   #   console.info "onCarouselEnd", event
 
   onTableSelect: (row, table) ->
-    console.log "->", row.entity, __.Dialog.Crud
-    __.Dialog.Crud.show
+    __.Dialog.User.show
       title   : "Edit #{row.entity.name}"
       entity  : row.entity
-      fields  : ["name", "when"]
+      # fields  : ["id", "name", "when"]
       # required: ["description"]
       destroy : true
 

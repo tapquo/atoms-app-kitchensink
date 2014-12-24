@@ -16,6 +16,9 @@ class __.Entity.User extends Atoms.Class.Entity
     image       : @url
     icon        : "user" unless @url
     info        : @when
-    text        : @name
+    text        : "#{@name} (name)"
     description : @description or new Date()
     style       : if @url then "thumb" else @style
+    # For table example
+    name        : "#{@name} (name)"
+    when        : @when
