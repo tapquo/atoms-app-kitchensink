@@ -1,6 +1,6 @@
 "use strict"
 
-# class Atoms.Entity.Contact extends Atoms.Class.Entity
+# class Atoms.Entity.User extends Atoms.Class.Entity
 class __.Entity.User extends Atoms.Class.Entity
 
   @fields "id", "name", "description", "url", "when", "style"
