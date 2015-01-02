@@ -63,7 +63,7 @@ children:
       children:
         - Atom.Figure:
             style: big
-            url: http://
+            url: http://cdn.tapquo.com/photos/soyjavi.jpg
         - Atom.Figure:
             style: normal
             url: http://
@@ -73,7 +73,6 @@ children:
         - Atom.Figure:
             style: tiny
             url: http://
-
 
   - Organism.Section:
       id: others
