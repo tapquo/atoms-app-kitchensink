@@ -10,6 +10,7 @@ children:
                   path: back
         - Atom.Heading:
             value: Dialogs
+
   - Organism.Section:
       id: main
       style: padding
@@ -27,7 +28,6 @@ children:
                   text: Push
                   callbacks:
                     - onPush
-
 
         - Atom.Heading:
             size: h4

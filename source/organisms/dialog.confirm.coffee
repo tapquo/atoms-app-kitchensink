@@ -3,7 +3,6 @@
 class Confirm extends Atoms.Organism.Dialog
 
   constructor: (attributes = {}) ->
-    attributes.id = "dialog"
     attributes.style = "warning side right"
     attributes.children = [
       "Organism.Header": children: [
@@ -49,6 +48,5 @@ class Confirm extends Atoms.Organism.Dialog
   onCancel: ->
     @hide()
     false
-
 
 new Confirm()

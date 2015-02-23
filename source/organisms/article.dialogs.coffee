@@ -6,10 +6,11 @@ class Dialogs extends Atoms.Organism.Article
 
   # -- Children Bubble Events --------------------------------------------------
   onSectionShow: ->
-    __.Dialog.Loading.show()
+    # __.Dialog.Loading.show()
     setTimeout =>
-      __.Dialog.Loading.hide()
-    , 1000
+      # __.Dialog.Loading.hide()
+      __.Dialog.Form.show()
+    , 100
 
   onConfirm: (event, dispatcher, hierarchy...) ->
     __.Dialog.Confirm.show()

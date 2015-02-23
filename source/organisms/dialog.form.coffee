@@ -10,6 +10,12 @@ class Form extends Atoms.Organism.Dialog
         "Atom.Heading": value: "Bookmard added!"
       ]
     ,
+      "Molecule.Navigation": style: "right", children: [
+        "Atom.Button": text: "Main"
+      ,
+        "Atom.Button": text: "Secondary"
+      ]
+    ,
       "Organism.Section": children: [
         "Molecule.Form": children: [
           "Atom.Label": value: "Name"

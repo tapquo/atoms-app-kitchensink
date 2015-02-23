@@ -31,6 +31,9 @@ class Form extends Atoms.Organism.Article
   onFormError: (event, form, hierarchy...) ->
     console.info "onFormError", form.value()
 
+  onFormComplete: (event, form, hierarchy...) ->
+    console.info "onFormComplete", form.value()
+
   onButtonTouch: (event, atom) ->
     atom.el.addClass("loading").attr "disabled", true
     setTimeout =>

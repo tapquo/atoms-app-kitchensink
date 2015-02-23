@@ -6,19 +6,11 @@ class Welcome extends Atoms.Organism.Article
 
   render: ->
     super
-    atom = @main.appendChild "Atom.Button", text: "remove", style: "fluid"
-    console.log "CHILDREN", @main.children
+    atom = @main.appendChild "Atom.Button", text: "Remove this Atom (normal)", style: "fluid big", screen: "normal"
+    atom = @main.appendChild "Atom.Button", text: "Remove this Atom (small)", style: "fluid big", screen: "small"
 
-    # setTimeout =>
-    #   @main.children[1].destroy()
-    #   atom.destroy()
-    #   console.log "CHILDREN", @main.children
-    # , 1000
-
-    setTimeout =>
-      # @main.destroyChildren(@main.children[1].uid)
-      @main.destroyChildren()
-      console.log "CHILDREN", @main.children
-    , 2000
+  # -- Children Bubble Events --------------------------------------------------
+  onButtonTouch: (event, atom) ->
+    atom.destroy()
 
 new Welcome()

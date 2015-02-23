@@ -18,7 +18,7 @@ class __.Entity.User extends Atoms.Class.Entity
     info        : @when
     text        : "#{@name} (name)"
     description : @description or new Date()
-    style       : if @url then "thumb" else @style
+    # style       : if @url then "thumb" else @style
     # For table example
     name        : "#{@name} (name)"
     when        : @when

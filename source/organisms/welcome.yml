@@ -1,4 +1,7 @@
 id: welcome
+data:
+  flex : "horizontal center"
+  order: 1
 children:
   - Organism.Header:
       id: header
@@ -10,14 +13,17 @@ children:
                 icon: menu
                 path: menu
       - Atom.Heading:
+          style: left
           value: Atoms
-          size: h2
-      - Atom.Heading:
-          value: Kitchensink
-          size: h3
       - Molecule.Navigation:
           style: right
           children:
+            - Atom.Button:
+                text: small
+                screen: small
+            - Atom.Button:
+                text: normal
+                screen: normal
             - Atom.Button:
                 icon: keypad
                 count: 10

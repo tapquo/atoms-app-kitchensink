@@ -3,14 +3,15 @@ children:
   - Organism.Header:
       children:
         - Atom.Heading:
+            style: left
             value: Options
 
         - Molecule.Navigation:
             style: right
             children:
               - Atom.Button:
-                  icon: navicon
-                  path: second/main
+                  icon: close
+                  path: menu
 
   - Organism.Section:
       id: list

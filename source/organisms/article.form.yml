@@ -34,6 +34,7 @@ children:
               - change
               - submit
               - error
+              - complete
             children:
               - Atom.Label:
                   value: label
@@ -46,7 +47,10 @@ children:
               - Atom.Input:
                   type: password
                   name: password
+                  required: true
                   placeholder: "password..."
+                  events:
+                    - keyup
               - Atom.Label:
                   value: Types
               - Atom.Input:

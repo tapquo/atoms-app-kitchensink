@@ -51,11 +51,19 @@ class List extends Atoms.Organism.Article
     false
 
   onLoadContacts: =>
+    for i in [1..2]
+      __.Entity.Campaign.createOrUpdate id: i, name: "Name #{i}", goals: [], advocates: []
+
+    setTimeout ->
+      e = __.Entity.Campaign.all()[1]
+      __.Entity.Campaign.createOrUpdate id: e.id, name: "new #{e.name}"
+    , 1000
+
     @search.value ""
     entity = __.Entity.User
     entity.create name: ".thumb style", style: "anchor"
-    entity.create name: "Javi Jiménez Villar", style: "thumb", when: "10/04/1980", url: "http://cdn.tapquo.com/photos/soyjavi.jpg"
-    entity.create name: "Catalina Oyaneder", style: "thumb", when: "26/03/1980", url: "http://cdn.tapquo.com/photos/cata.jpg"
+    entity.create name: "Javi Jiménez Villar", when: "10/04/1980", url: "http://cdn.tapquo.com/photos/soyjavi.jpg"
+    entity.create name: "Catalina Oyaneder", style: "-th-umb", when: "26/03/1980", url: "http://cdn.tapquo.com/photos/csata.jpg"
     entity.create name: "Oihane Merino", when: "26/03/1980", url: "http://cdn.tapquo.com/photos/oihane.jpg"
     entity.create name: "Mock Data", style: "anchor"
     entity.create name: "Name #{i}" for i in [1..10]
@@ -66,6 +74,6 @@ class List extends Atoms.Organism.Article
         name: "Javitxu"
       __.Entity.User.findBy("name", "Name 1")?.updateAttributes
         name: "Catilla"
-    , 1000
+    , 2000
 
 list = new List()

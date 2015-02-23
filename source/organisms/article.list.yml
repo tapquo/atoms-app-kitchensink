@@ -47,6 +47,19 @@ children:
         - pull
       children:
         - Molecule.List:
+            events:
+              - select
+            callbacks:
+              - onCampaignSelect
+            bind:
+              entity      : "__.Entity.Campaign"
+              atom        : "Atom.Li"
+              events      : ["touch"]
+              create      : true
+              update      : true
+              destroy     : true
+
+        - Molecule.List:
             id          : list
             events      :
              - select

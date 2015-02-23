@@ -6,6 +6,12 @@ children:
         - Atom.Heading:
             value: Extensions
             style: align left
+        - Molecule.Navigation:
+            style: right
+            children:
+              - Atom.Button:
+                  icon: close
+                  path: extensions
 
   - Organism.Section:
       id: payments
